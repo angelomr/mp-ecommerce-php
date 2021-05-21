@@ -15,6 +15,7 @@ $item->title = $products[$_POST['id']]['name'];
 $item->description = 'Celular de Tienda e-commerce';
 $item->quantity = 1;
 $item->unit_price = $products[$_POST['id']]['price'];
+$item->$picture_url = $products[$_POST['id']]['image'];
 $preference->items = array($item);
 
 // - Enviar os detalhes do pagador.
