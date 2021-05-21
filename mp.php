@@ -20,9 +20,9 @@ $preference->items = array($item);
 // - Enviar os detalhes do pagador.
 $payer = new MercadoPago\Payer();
 $payer->id = 725762927;
-$payer->name = "APRO";
-$payer->first_name = "APRO Angelo";
-$payer->lastname = "Rodrigues";
+// $payer->name = "APRO";
+$payer->first_name = "APRO";
+$payer->last_name = "Rodrigues";
 $payer->email = "test_user_92801501@testuser.com";
 $payer->date_created = date("Y-m-d") . "T . " . date('H:i:s');
 $payer->phone = array(
