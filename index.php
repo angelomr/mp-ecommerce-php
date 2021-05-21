@@ -17,8 +17,6 @@
     <link rel="stylesheet" href="./assets/category.css" media="screen, print">
 
     <link rel="stylesheet" href="./assets/merch-tools.css" media="screen, print">
-
-    <link rel="stylesheet" href="./assets/fonts" media="">
     <style>
         .as-filter-button-text {
             font-size: 26px;
@@ -759,9 +757,6 @@
                                                     </div>
                                                 </div>
                                             </div>
-
-
-
                                         </div>
 
                                     </div>
@@ -771,10 +766,7 @@
                                                 <h3 class="as-producttile-name">
                                                     <div class="as-producttile-tilelink relatedlink" data-var-name="s.prop27|s.prop29" data-relatedlink="1|AirPods|MMEF2" data-evar11="MMEF2|category">
                                                         <span data-ase-truncate="2">iPhone 8</span>
-
-
                                                     </div>
-
                                                 </h3>
                                             </div>
                                             <div class="as-price-currentprice as-producttile-currentprice">
@@ -796,12 +788,9 @@
                                 <div class="as-producttile large-4 small-6 group-2">
                                     <div class="as-producttile-tilehero with-paddlenav with-paddlenav-onhover">
                                         <div class="as-dummy-container as-dummy-img">
-
                                             <img src="./assets/wireless-headphones" class="ir ir item-image as-producttile-image  " alt="" width="445" height="445">
                                         </div>
                                         <div class="images mini-gallery gal3 ">
-
-
                                             <div class="as-isdesktop with-paddlenav with-paddlenav-onhover">
                                                 <div class="clearfix image-list xs-no-js as-util-relatedlink relatedlink" data-relatedlink="4|BeatsX Earphones - Matte Silver|MR3J2">
                                                     <div class="as-tilegallery-element as-image-selected">

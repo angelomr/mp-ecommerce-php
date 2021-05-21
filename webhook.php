@@ -1,4 +1,10 @@
 <?php
-echo '<pre>';
-print_r($_GET);
-file_put_contents('logs/' . date('His').'_' . $_GET['t']. '.txt', print_r($_GET, true));
+
+if (isset($_POST)) {
+    file_put_contents('logs/' . date('His').'_post_' . $_POST['type']. '.txt', print_r($_POST, true));
+}
+if (isset($_GET)) {
+    echo '<pre>';
+    print_r($_GET);
+    file_put_contents('logs/' . date('His').'_get_' . $_GET['t']. '.txt', print_r($_GET, true));
+}
