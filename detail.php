@@ -119,7 +119,8 @@
                                             Qtd: <?php echo $_POST['unit'] ?>
                                         </h3>
                                     </div>
-                                    <button type="submit" class="mercadopago-button" formmethod="post"></button>
+                                    <a href="<?php echo $preference->init_point; ?>">Pagar com Mercado Pago</a>
+                                    <!-- <button type="submit" class="mercadopago-button" formmethod="post"></button> -->
                                 </div>
                             </div>
                         </div>
@@ -149,10 +150,6 @@
         mp.checkout({
             preference: {
                 id: '<?= $preference->id ?>'
-            },
-            render: {
-                container: '.mercadopago-button', // Indica onde o botão de pagamento será exibido
-                label: 'Pague a compra', // Muda o texto do botão de pagamento (opcional)
             }
         });
     </script>
