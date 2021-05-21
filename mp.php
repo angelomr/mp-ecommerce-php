@@ -21,25 +21,26 @@ $preference->items = array($item);
 // - Enviar os detalhes do pagador.
 $payer = new MercadoPago\Payer();
 $payer->id = 725762927;
-// $payer->name = "APRO";
-$payer->first_name = "APRO";
-$payer->last_name = "Rodrigues";
+$payer->name = "Lalo";
+$payer->surname = "Landa";
+//$payer->first_name = "Lalo";
+// $payer->last_name = "Landa";
 $payer->email = "test_user_92801501@testuser.com";
 $payer->date_created = date("Y-m-d") . "T . " . date('H:i:s');
 $payer->phone = array(
-    "area_code" => "11",
-    "number" => "96377-3186"
+    "area_code" => "55",
+    "number" => "98529-8743"
 );
-
+/*
 $payer->identification = array(
     "type" => "CPF",
     "number" => "19119119100"
 );
-
+*/
 $payer->address = array(
-    "street_name" => "Manoel Salgado",
-    "street_number" => 220,
-    "zip_code" => "04191270"
+    "street_name" => "nsurgentes Sur",
+    "street_number" => 1602,
+    "zip_code" => "78134-190"
 );
 
 $preference->payer = $payer;
@@ -66,6 +67,9 @@ $preference->payment_methods = array(
     "installments" => 6
 );
 
-
+$preference->statement_descriptor = "WEBSTUDIO";
 
 $preference->save();
+
+// echo '<pre>';
+// print_r($preference);

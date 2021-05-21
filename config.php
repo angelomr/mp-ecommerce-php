@@ -1,4 +1,6 @@
 <?php
+date_default_timezone_set('America/Sao_Paulo');
+
 $url = "http://mercadopago.local";
 $accessToken = "APP_USR-334491433003961-030821-12d7475807d694b645722c1946d5ce5a-725736327";
 $integratorId = "dev_24c65fb163bf11ea96500242ac130004";
