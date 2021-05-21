@@ -52,6 +52,8 @@ $preference->back_urls = array(
 );
 $preference->auto_return = "approved";
 
+$preference->notification_url = "{$url}/webhook.php";
+
 // - Enviar o número do pedido (external_reference)
 $preference->external_reference = 'angelo@wsbrasil.com';
 
@@ -63,5 +65,7 @@ $preference->payment_methods = array(
     ),
     "installments" => 6
 );
+
+
 
 $preference->save();
