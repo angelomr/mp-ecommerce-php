@@ -39,25 +39,31 @@ if (isset($json) && $json!="") {
 
 function processReturn($accessToken)
 {
-    MercadoPago\SDK::setAccessToken($accessToken);
-    
-    switch ($_POST["type"]) {
-        case "payment":
-            $txt = MercadoPago\Payment::find_by_id($_POST["id"]);
-            $log = date('His').'_return_payment.txt';
-            break;
-        case "plan":
-            $txt = MercadoPago\Plan::find_by_id($_POST["id"]);
-            $log = date('His').'_return_plan.txt';
-            break;
-        case "subscription":
-            $txt = MercadoPago\Subscription::find_by_id($_POST["id"]);
-            $log = date('His').'_return_subscription.txt';
-            break;
-        case "invoice":
-            $txt = MercadoPago\Invoice::find_by_id($_POST["id"]);
-            $log = date('His').'_return_invoice.txt';
-            break;
+    $log="";
+    try {
+        MercadoPago\SDK::setAccessToken($accessToken);
+        
+        switch ($_POST["type"]) {
+            case "payment":
+                $txt = MercadoPago\Payment::find_by_id($_POST["id"]);
+                $log = date('His').'_return_payment.txt';
+                break;
+            case "plan":
+                $txt = MercadoPago\Plan::find_by_id($_POST["id"]);
+                $log = date('His').'_return_plan.txt';
+                break;
+            case "subscription":
+                $txt = MercadoPago\Subscription::find_by_id($_POST["id"]);
+                $log = date('His').'_return_subscription.txt';
+                break;
+            case "invoice":
+                $txt = MercadoPago\Invoice::find_by_id($_POST["id"]);
+                $log = date('His').'_return_invoice.txt';
+                break;
+        }
+    } catch (Exception $e) {
+        $txt = $e->getMessage();
+        $log = $log = date('His').'_return_error.txt';
     }
 
     file_put_contents('logs/' . $log, print_r($txt, true));
