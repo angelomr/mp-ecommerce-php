@@ -11,11 +11,11 @@ switch ($_GET['t']) {
         break;
 
     case 'pending':
-        echo "<h2>Pagamento Falhou</h2>";
+        echo "<h2>Pagamento Está Pendente</h2>";
         break;
     
     default:
-        echo "<h2>Pagamento Falhou</h2>";
+        echo "<h2>Web Hook Recebido</h2>";
 }
 
 if (isset($_POST) && count($_POST) > 0) {
@@ -25,4 +25,9 @@ if (isset($_GET) && count($_GET) > 0) {
     echo '<pre>';
     print_r($_GET);
     file_put_contents('logs/' . date('His').'_get_' . $_GET['t']. '.txt', print_r($_GET, true));
+}
+
+$json = file_get_contents('php://input');
+if (isset($json) && $json!="") {
+    file_put_contents('logs/' . date('His').'_json.txt', print_r($json, true));
 }
