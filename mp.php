@@ -26,7 +26,7 @@ $payer->surname = "Landa";
 //$payer->first_name = "Lalo";
 // $payer->last_name = "Landa";
 $payer->email = "test_user_92801501@testuser.com";
-$payer->date_created = date("Y-m-d") . "T . " . date('H:i:s');
+$payer->date_created = "2021-05-01T" . date('H:i:s');
 $payer->phone = array(
     "area_code" => "55",
     "number" => "98529-8743"
@@ -38,7 +38,7 @@ $payer->identification = array(
 );
 */
 $payer->address = array(
-    "street_name" => "nsurgentes Sur",
+    "street_name" => "Insurgentes Sur",
     "street_number" => 1602,
     "zip_code" => "78134-190"
 );
