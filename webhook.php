@@ -3,19 +3,19 @@ date_default_timezone_set('America/Sao_Paulo');
 
 switch ($_GET['t']) {
     case 'success':
-        echo "<h2>Pagamento Autorizado<h2>";
+        echo "<h2>Pagamento Autorizado</h2>";
         break;
 
     case 'failure':
-        echo "<h2>Pagamento Falhou<h2>";
+        echo "<h2>Pagamento Falhou</h2>";
         break;
 
     case 'pending':
-        echo "<h2>Pagamento Falhou<h2>";
+        echo "<h2>Pagamento Falhou</h2>";
         break;
     
     default:
-        echo "<h2>Pagamento Falhou<h2>";
+        echo "<h2>Pagamento Falhou</h2>";
 }
 
 if (isset($_POST) && count($_POST) > 0) {
