@@ -1,5 +1,7 @@
 <?php
 date_default_timezone_set('America/Sao_Paulo');
+require __DIR__ .  '/vendor/autoload.php';
+// Adicione as credenciais
 
 switch ($_GET['t']) {
     case 'success':
@@ -12,6 +14,9 @@ switch ($_GET['t']) {
 
     case 'pending':
         echo "<h2>Pagamento Está Pendente</h2>";
+        break;
+    case 'hook':
+        processReturn($accessToken);
         break;
     
     default:
@@ -30,4 +35,30 @@ if (isset($_GET) && count($_GET) > 0) {
 $json = file_get_contents('php://input');
 if (isset($json) && $json!="") {
     file_put_contents('logs/' . date('His').'_json.txt', print_r($json, true));
+}
+
+function processReturn($accessToken)
+{
+    MercadoPago\SDK::setAccessToken($accessToken);
+    
+    switch ($_POST["type"]) {
+        case "payment":
+            $txt = MercadoPago\Payment::find_by_id($_POST["id"]);
+            $log = date('His').'_return_payment.txt';
+            break;
+        case "plan":
+            $txt = MercadoPago\Plan::find_by_id($_POST["id"]);
+            $log = date('His').'_return_plan.txt';
+            break;
+        case "subscription":
+            $txt = MercadoPago\Subscription::find_by_id($_POST["id"]);
+            $log = date('His').'_return_subscription.txt';
+            break;
+        case "invoice":
+            $txt = MercadoPago\Invoice::find_by_id($_POST["id"]);
+            $log = date('His').'_return_invoice.txt';
+            break;
+    }
+
+    file_put_contents('logs/' . $log, print_r($txt, true));
 }
