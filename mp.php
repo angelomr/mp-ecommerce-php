@@ -53,7 +53,7 @@ $preference->back_urls = array(
 );
 $preference->auto_return = "approved";
 
-$preference->notification_url = "{$url}/webhook.php?t=hook";
+$preference->notification_url = "https://webhook.site/934ef10e-ee76-464a-8c37-1ae28a12a529";
 
 // - Enviar o número do pedido (external_reference)
 $preference->external_reference = 'angelo@wsbrasil.com';
