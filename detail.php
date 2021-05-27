@@ -119,7 +119,11 @@
                                             Qtd: <?php echo $_POST['unit'] ?>
                                         </h3>
                                     </div>
-                                    <a href="<?= $preference->init_point ?>" class="mercadopago-button">Pagar Teste</a>
+                                    <button type="button" class="mercadopago-button"
+                                        onclick="window.location='<?= $preference->init_point ?>';"
+                                    >
+                                        Pagar a Compra
+                                    </button>
                                     <!-- <button type="submit" class="mercadopago-button" formmethod="post"></button> -->
                                 </div>
                             </div>
