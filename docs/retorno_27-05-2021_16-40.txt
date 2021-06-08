@@ -1,0 +1,34 @@
+Link para Visualizar o WebHook
+https://webhook.site/#!/934ef10e-ee76-464a-8c37-1ae28a12a529/e0497891-bd06-43f6-a3c3-fe0529586980/1
+
+WebHook
+{
+  "action": "payment.created",
+  "api_version": "v1",
+  "data": {
+    "id": "15069586729"
+  },
+  "date_created": "2021-05-27T19:36:21Z",
+  "id": 7454748470,
+  "live_mode": true,
+  "type": "payment",
+  "user_id": "725736327"
+}
+
+Retorno GET com Success
+Array
+(
+    [t] => success
+    [collection_id] => 15069586729
+    [collection_status] => approved
+    [payment_id] => 15069586729
+    [status] => approved
+    [external_reference] => angelo@wsbrasil.com
+    [payment_type] => credit_card
+    [merchant_order_id] => 2727074170
+    [preference_id] => 725736327-d9519895-5cdc-4e63-b613-04e03caa8d75
+    [site_id] => MLB
+    [processing_mode] => aggregator
+    [merchant_account_id] => null
+)
+
