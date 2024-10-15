@@ -119,12 +119,12 @@
                                             Qtd: <?php echo $_POST['unit'] ?>
                                         </h3>
                                     </div>
-                                    <button type="button" class="mercadopago-button"
+                                    <!-- <button type="button" class="mercadopago-button"
                                         onclick="window.location='<?= $preference->init_point ?>';"
                                     >
                                         Pagar a Compra
-                                    </button>
-                                    <!-- <button type="submit" class="mercadopago-button" formmethod="post"></button> -->
+                                    </button> -->
+                                    <button type="submit" class="mercadopago-button" formmethod="post"></button>
                                 </div>
                             </div>
                         </div>
@@ -155,11 +155,11 @@
             preference: {
                 id: '<?= $preference->id ?>'
             }
-            /*,
+            ,
             render: {
                 container: '.mercadopago-button', // Indica onde o botão de pagamento será exibido
                 label: 'Pague a compra', // Muda o texto do botão de pagamento (opcional)
-            }*/
+            }
         });
     </script>
 </body></html>
