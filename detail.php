@@ -146,7 +146,7 @@
 <script src="https://sdk.mercadopago.com/js/v2"></script>
     <script>
         // Adicione as credenciais do SDK
-        const mp = new MercadoPago('APP_USR-6096a634-0b35-452c-94c9-a18adb8ffb15', {
+        const mp = new MercadoPago('APP_USR-CHAVE-DE-TESTE-DO-MERCADOPAGO', {
             locale: 'pt-BR'
         });
 
